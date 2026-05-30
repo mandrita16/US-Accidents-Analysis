@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+missingno
+geopandas
+geoplot
+geopy
+nltk
+opendatasets
+kaggle
