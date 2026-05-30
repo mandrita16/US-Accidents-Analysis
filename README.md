@@ -200,7 +200,6 @@ Visualization Types:
 US-Traffic-Accident-Analytics/
 │
 ├── Analysis_of_US_Accidents.ipynb
-├── Analysis_of_US_Accidents_Report.pdf
 ├── requirements.txt
 └── README.md
 ```
