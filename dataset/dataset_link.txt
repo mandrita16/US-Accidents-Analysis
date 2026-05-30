@@ -1,0 +1,6 @@
+Dataset Source:
+
+https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
+
+The dataset is not included in this repository due to its large size.
+Download it directly from Kaggle and place it in the project directory before running the notebook.
