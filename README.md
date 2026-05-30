@@ -152,13 +152,7 @@ US-Accidents-Analysis/
 │
 ├── dataset/
 │   └── US_Accidents_Dec20_Updated.csv
-│
-├── images/
-│   ├── severity_distribution.png
-│   ├── state_analysis.png
-│   ├── hotspot_map.png
-│   └── monthly_trends.png
-│
+│   
 └── reports/
     └── project_report.pdf
 ```
