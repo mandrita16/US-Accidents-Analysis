@@ -1,36 +1,34 @@
-# US Accidents Analysis
+# US Traffic Accident Analytics
 
 ## Overview
 
-This project performs Exploratory Data Analysis (EDA) on the US Accidents dataset obtained from Kaggle. The goal is to identify accident patterns, severity trends, geographical hotspots, and temporal insights across the United States using data analytics and visualization techniques.
+Road traffic accidents are a major public safety concern worldwide. Understanding accident patterns can help authorities, transportation agencies, and urban planners improve road safety and reduce accident risks.
+
+This project performs Exploratory Data Analysis (EDA) on the US Accidents Dataset, a large-scale traffic accident dataset containing approximately 7.7 million accident records collected across 49 US states between February 2016 and March 2023.
+
+The analysis focuses on identifying accident trends, severity patterns, weather impacts, temporal variations, and geographical hotspots using Python-based data analytics and visualization techniques.
 
 ---
 
-## Dataset
+## Dataset Information
 
-**Source:** https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
+### Dataset Source
 
-The dataset contains millions of accident records collected from multiple traffic and transportation sources across the United States.
+US Accidents Dataset
 
-### Important Features
+https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents
 
-- ID
-- Severity
-- Start_Time
-- End_Time
-- Start_Lat
-- Start_Lng
-- End_Lat
-- End_Lng
-- Distance(mi)
-- Description
-- Street
-- City
-- County
-- State
-- Zipcode
-- Country
-- Timezone
+### Dataset Statistics
+
+- Coverage: 49 US States
+- Time Period: February 2016 – March 2023
+- Total Records: Approximately 7.7 Million
+- Data Sources:
+  - US Department of Transportation
+  - State Transportation Agencies
+  - Traffic Cameras
+  - Traffic Sensors
+  - Law Enforcement Agencies
 
 ---
 
@@ -38,39 +36,94 @@ The dataset contains millions of accident records collected from multiple traffi
 
 - Analyze accident severity distribution.
 - Identify accident-prone states and cities.
-- Discover peak accident hours and days.
-- Study accident trends over time.
-- Explore geographic accident hotspots.
-- Understand data quality and missing values.
-- Create informative visualizations for decision-making.
+- Study accident frequency across different time periods.
+- Investigate the influence of weather conditions on accidents.
+- Examine geographical accident hotspots.
+- Analyze road infrastructure factors contributing to accidents.
+- Generate meaningful insights using visual analytics.
 
 ---
 
-## Tech Stack
+## Features Analyzed
+
+### Accident Information
+
+- Severity
+- Start Time
+- End Time
+- Distance
+- Description
+
+### Geographical Information
+
+- Latitude
+- Longitude
+- City
+- County
+- State
+- Zipcode
+
+### Weather Information
+
+- Temperature
+- Humidity
+- Pressure
+- Visibility
+- Wind Speed
+- Precipitation
+- Weather Condition
+
+### Road Infrastructure Features
+
+- Crossing
+- Junction
+- Railway
+- Stop
+- Traffic Signal
+- Roundabout
+- Station
+- Traffic Calming
+
+### Time Features
+
+- Sunrise/Sunset
+- Civil Twilight
+- Nautical Twilight
+- Astronomical Twilight
+
+---
+
+## Technologies Used
 
 ### Programming Language
+
 - Python
 
-### Libraries Used
+### Libraries
 
-#### Data Analysis
+#### Data Processing
+
 - Pandas
 - NumPy
 
 #### Data Visualization
+
 - Matplotlib
 - Seaborn
 - Plotly
 
 #### Geospatial Analysis
+
 - GeoPandas
 - GeoPlot
 - Geopy
 
 #### Data Quality Analysis
+
 - Missingno
 
 #### Dataset Access
+
 - Kaggle API
 - OpenDatasets
 
@@ -78,102 +131,97 @@ The dataset contains millions of accident records collected from multiple traffi
 
 ## Project Workflow
 
-### 1. Dataset Collection
+### 1. Importing the Necessary Libraries
 
-Dataset downloaded directly from Kaggle using OpenDatasets:
+The project begins by importing Python libraries required for data manipulation, visualization, geospatial analysis, and statistical exploration.
 
-```python
-import opendatasets as od
+### 2. Dataset Collection
 
-od.download("https://www.kaggle.com/sobhanmoosavi/us-accidents")
-```
+Downloaded the dataset directly from Kaggle using Kaggle API and OpenDatasets.
 
-### 2. Data Loading
+### 3. Data Loading
 
-```python
-import pandas as pd
+Loaded accident records into Pandas DataFrames for processing and analysis.
 
-df = pd.read_csv("US_Accidents_Dec20_Updated.csv")
-```
+### 4. Data Cleaning
 
-### 3. Data Cleaning
-
-- Handling missing values
-- Removing duplicate records
-- Checking data types
+- Missing value analysis
 - Data preprocessing
+- Duplicate handling
+- Data validation
 
-### 4. Exploratory Data Analysis
+### 5. Exploratory Data Analysis
 
 #### Severity Analysis
-- Accident severity distribution
-- High-risk accident categories
 
-#### Location Analysis
+- Accident severity distribution
+- Severity comparison
+
+#### Temporal Analysis
+
+- Hourly accident trends
+- Daily accident trends
+- Monthly accident trends
+
+#### Geographical Analysis
+
 - State-wise accident distribution
 - City-wise accident distribution
-- County-wise accident analysis
-
-#### Time Analysis
-- Hourly accident trends
-- Monthly accident trends
-- Day-wise accident patterns
-
-#### Geographic Analysis
-- Latitude-Longitude mapping
 - Accident hotspot identification
-- Regional accident density
 
-### 5. Visualization
+#### Weather Analysis
+
+- Weather condition impact
+- Visibility analysis
+- Environmental factor analysis
+
+### 6. Data Visualization
 
 Created visualizations using:
+
 - Matplotlib
 - Seaborn
 - Plotly
 
-Visualization types:
+Visualization Types:
+
+- Histograms
 - Bar Charts
-- Pie Charts
 - Scatter Plots
 - Heatmaps
-- Geographic Maps
-- Interactive Dashboards
+- Interactive Visualizations
+- Geographic Analysis Charts
 
 ---
 
 ## Project Structure
 
 ```text
-US-Accidents-Analysis/
+US-Traffic-Accident-Analytics/
 │
 ├── Analysis_of_US_Accidents.ipynb
-├── README.md
+├── Analysis_of_US_Accidents_Report.pdf
 ├── requirements.txt
-│
-├── dataset/
-│   └── US_Accidents_Dec20_Updated.csv
-│   
-└── reports/
-    └── project_report.pdf
+└── README.md
 ```
 
 ---
 
 ## Installation
 
-### Clone Repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/mandrita16/US-Accidents-Analysis.git
+git clone https://github.com/yourusername/US-Traffic-Accident-Analytics.git
 ```
 
-### Move into Project Directory
+Move into the project directory:
 
 ```bash
-cd US-Accidents-Analysis
+cd US-Traffic-Accident-Analytics
 ```
 
-### Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -202,31 +250,32 @@ kaggle
 
 ## Key Insights
 
-- Accident occurrences are concentrated in highly populated urban regions.
-- Certain states consistently report higher accident frequencies.
-- Peak traffic hours show increased accident rates.
-- Accident severity varies across different locations.
-- Geographic visualization helps identify accident-prone zones.
+- Accident occurrences vary significantly across states and cities.
+- Severe accidents are concentrated in major transportation corridors.
+- Adverse weather conditions increase accident risk.
+- Peak traffic hours experience higher accident frequencies.
+- Urban regions show greater accident density than rural regions.
+- Geospatial analysis helps identify accident-prone zones.
 
 ---
 
-## Future Enhancements
+## Future Improvements
 
 - Accident Severity Prediction using Machine Learning
-- Power BI Dashboard Integration
-- Streamlit Web Application
-- Real-Time Traffic Accident Analysis
-- Interactive Geospatial Dashboard
+- Real-Time Traffic Monitoring Dashboard
+- Power BI Integration
+- Streamlit Deployment
+- Predictive Accident Risk Analysis
 
 ---
 
 ## Learning Outcomes
 
-- Exploratory Data Analysis (EDA)
+- Exploratory Data Analysis
 - Data Cleaning and Preprocessing
-- Geospatial Analytics
 - Data Visualization
-- Large Dataset Handling
+- Geospatial Analytics
+- Large-Scale Dataset Handling
 - Insight Generation from Real-World Data
 
 ---
@@ -235,4 +284,4 @@ kaggle
 
 Mandrita Dasgupta
 
-Data Analytics | Python | Data Visualization | Geospatial Analytics
+Data Analytics | Data Science | Machine Learning | Data Visualization
